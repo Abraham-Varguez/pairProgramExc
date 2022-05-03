@@ -38,6 +38,7 @@ console.log(numArray.filter(numPrime))
 console.log(numArray2.filter(numPrime))
 
 //Medium (1)
+
 let vowelChecker = (letter) => {
 
 
@@ -53,6 +54,7 @@ vowelChecker('b')
 
 // Mediun (3)
 //The While Loop
+
 function gcd2Numbers(x, y) {
     x = Math.abs(x)
     y = Math.abs(y)
@@ -68,7 +70,7 @@ console.log(gcd2Numbers(336, 360))
 console.log(gcd2Numbers(78, 126))
 //stop here
 
-//medium 2
+//Medium (2)
 
 function isAnagram(str1,str2){
     let p1 = str1.length;
@@ -94,9 +96,8 @@ console.log("the two strings are" + "anagram of each other");
 
 else console.log("the two strings are not" + " anagram of each other ");
 
-//stop here
 
-//Medium 2
+//Medium (4)
 
 const car = {
 
