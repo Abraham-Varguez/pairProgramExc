@@ -48,7 +48,83 @@ function gcd2Numbers(x, y) {
 console.log(gcd2Numbers(336, 360))
 console.log(gcd2Numbers(78, 126))
 
+//Medium 2
+
+const car = {
+
+    make: 'Honda',
+    model: 'civic',
+    year: '2022',
+    mileage: 10000,
+    color: 'black',
+    driveToWork: function () {
+        console.log(this.mileage + 33)
+    },
+    driveAroundTheWorld: function () {
+        console.log(this.mileage + 24000)
+    },
+    runErrands: function () {
+
+    }
+}
+car.driveToWork()
+car.driveAroundTheWorld()
+
 
 
 //Hard
+
+
+function areBracketsBalanced(expr) {
+
+
+    let array = [];
+
+    for (let i = 0; i < expr.length; i++) {
+        let x = expr[i];
+
+        if (x == '(' || x == '[' || x == '{') {
+
+
+            array.push(x);
+            continue;
+        }
+
+
+        if (array.length == 0)
+            return false;
+
+        let check;
+        switch (x) {
+            case ')':
+                check = array.pop();
+                if (check == '{' || check == '[')
+                    return false;
+                break;
+
+            case '}':
+                check = array.pop();
+                if (check == '(' || check == '[')
+                    return false;
+                break;
+
+            case ']':
+                check = array.pop();
+                if (check == '(' || check == '{')
+                    return false;
+                break;
+        }
+    }
+
+    return (array.length == 0);
+}
+
+let expr = "([{}])";
+
+// Function call
+if (areBracketsBalanced(expr))
+    console.log("Balanced ");
+else
+    console.log("Not Balanced ");
+
 
